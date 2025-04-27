@@ -14,13 +14,6 @@ spring:
       ddl-auto: update
     show-sql: true
 
-outbound:
-  identity:
-    client-id: "880495067714-3ehggvgmrn2lqqclbb4n007tb0vj5g3s.apps.googleusercontent.com"
-    client-secret: "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"
-    redirect-uri: "http://localhost:3000/authenticate"
-    grant-type: "authorization_code"
-
 jwt:
   signerKey: "MA7hSmG1qr/AgLiWyI0VxvFfYhquo6TNED6Aa9sonpHIEdc6S6nAS6kl+GUnMdIz"
   valid-duration: 3600
