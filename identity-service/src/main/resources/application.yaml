@@ -1,0 +1,31 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /identity
+
+spring:
+  datasource:
+    url: ${DBMS_CONNECTION:jdbc:mysql://localhost:3306/identity_service}
+    username: ${DBMS_USERNAME:root}
+    password: ${DBMS_PASSWORD:root}
+    driver-class-name: "com.mysql.cj.jdbc.Driver"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+outbound:
+  identity:
+    client-id: "880495067714-3ehggvgmrn2lqqclbb4n007tb0vj5g3s.apps.googleusercontent.com"
+    client-secret: "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"
+    redirect-uri: "http://localhost:3000/authenticate"
+    grant-type: "authorization_code"
+
+jwt:
+  signerKey: "MA7hSmG1qr/AgLiWyI0VxvFfYhquo6TNED6Aa9sonpHIEdc6S6nAS6kl+GUnMdIz"
+  valid-duration: 3600
+  refreshable-duration: 36000
+
+app:
+  service:
+    profile: http://localhost:8081/profile
