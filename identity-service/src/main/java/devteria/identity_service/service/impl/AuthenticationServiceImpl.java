@@ -1,5 +1,10 @@
 package devteria.identity_service.service.impl;
 
+import java.text.ParseException;
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
+import java.util.*;
+
 import com.nimbusds.jose.*;
 import com.nimbusds.jose.crypto.MACSigner;
 import com.nimbusds.jose.crypto.MACVerifier;
@@ -24,11 +29,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
-
-import java.text.ParseException;
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
-import java.util.*;
 
 @Service
 @RequiredArgsConstructor
@@ -94,10 +94,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
         var token = generateToken(user);
 
-        return AuthenticationResponse.builder()
-                .token(token)
-                .authenticated(true)
-                .build();
+        return AuthenticationResponse.builder().token(token).authenticated(true).build();
     }
 
     @Override

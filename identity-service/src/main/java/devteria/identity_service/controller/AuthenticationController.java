@@ -23,11 +23,11 @@ import org.springframework.web.bind.annotation.*;
 public class AuthenticationController {
     AuthenticationService authenticationService;
 
-//    @PostMapping("/outbound/authentication")
-//    ApiResponse<AuthenticationResponse> outboundAuthenticate(@RequestParam("code") String code) {
-//        var result = authenticationService.outboundAuthenticate(code);
-//        return ApiResponse.<AuthenticationResponse>builder().result(result).build();
-//    }
+    //    @PostMapping("/outbound/authentication")
+    //    ApiResponse<AuthenticationResponse> outboundAuthenticate(@RequestParam("code") String code) {
+    //        var result = authenticationService.outboundAuthenticate(code);
+    //        return ApiResponse.<AuthenticationResponse>builder().result(result).build();
+    //    }
 
     @PostMapping("/token")
     ApiResponse<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest request) {

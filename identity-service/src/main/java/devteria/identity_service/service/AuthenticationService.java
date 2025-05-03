@@ -1,5 +1,7 @@
 package devteria.identity_service.service;
 
+import java.text.ParseException;
+
 import com.nimbusds.jose.JOSEException;
 import devteria.identity_service.dto.request.AuthenticationRequest;
 import devteria.identity_service.dto.request.IntrospectRequest;
@@ -7,8 +9,6 @@ import devteria.identity_service.dto.request.LogoutRequest;
 import devteria.identity_service.dto.request.RefreshRequest;
 import devteria.identity_service.dto.response.AuthenticationResponse;
 import devteria.identity_service.dto.response.IntrospectResponse;
-
-import java.text.ParseException;
 
 public interface AuthenticationService {
 

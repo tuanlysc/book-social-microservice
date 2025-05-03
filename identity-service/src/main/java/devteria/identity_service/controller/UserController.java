@@ -1,5 +1,7 @@
 package devteria.identity_service.controller;
 
+import java.util.List;
+
 import devteria.identity_service.dto.request.UserCreationRequest;
 import devteria.identity_service.dto.request.UserUpdateRequest;
 import devteria.identity_service.dto.response.ApiResponse;
@@ -12,8 +14,6 @@ import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @Slf4j
 @RestController
@@ -69,8 +69,6 @@ public class UserController {
     @DeleteMapping("/{userId}")
     ApiResponse<String> deleteUser(@PathVariable("userId") String userId) {
         userService.deleteUser(userId);
-        return ApiResponse.<String>builder()
-                .result("User has been deleted")
-                .build();
+        return ApiResponse.<String>builder().result("User has been deleted").build();
     }
 }

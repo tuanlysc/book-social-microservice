@@ -1,5 +1,8 @@
 package devteria.identity_service.service.impl;
 
+import java.util.HashSet;
+import java.util.List;
+
 import devteria.identity_service.dto.request.RoleRequest;
 import devteria.identity_service.dto.response.RoleResponse;
 import devteria.identity_service.mapper.RoleMapper;
@@ -10,9 +13,6 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
-
-import java.util.HashSet;
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor

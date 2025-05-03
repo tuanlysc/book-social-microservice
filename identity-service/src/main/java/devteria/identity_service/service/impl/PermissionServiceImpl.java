@@ -1,5 +1,7 @@
 package devteria.identity_service.service.impl;
 
+import java.util.List;
+
 import devteria.identity_service.dto.request.PermissionRequest;
 import devteria.identity_service.dto.response.PermissionResponse;
 import devteria.identity_service.entity.Permission;
@@ -10,8 +12,6 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor

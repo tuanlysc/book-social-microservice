@@ -1,5 +1,8 @@
 package devteria.identity_service.service.impl;
 
+import java.util.HashSet;
+import java.util.List;
+
 import devteria.identity_service.constant.PredefinedRole;
 import devteria.identity_service.dto.request.UserCreationRequest;
 import devteria.identity_service.dto.request.UserUpdateRequest;
@@ -24,14 +27,10 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
-import java.util.List;
-
 @Service
 @Slf4j
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-
 public class UserServiceImpl implements UserService {
     UserRepository userRepository;
     RoleRepository roleRepository;
@@ -59,7 +58,6 @@ public class UserServiceImpl implements UserService {
 
         return userMapper.toUserResponse(user);
     }
-
 
     @Override
     @PreAuthorize("hasRole('ADMIN')")
