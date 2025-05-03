@@ -1,7 +1,6 @@
 package devteria.identity_service.service.impl;
 
 import devteria.identity_service.constant.PredefinedRole;
-import devteria.identity_service.dto.request.PasswordCreationRequest;
 import devteria.identity_service.dto.request.UserCreationRequest;
 import devteria.identity_service.dto.request.UserUpdateRequest;
 import devteria.identity_service.dto.response.UserResponse;
@@ -24,9 +23,6 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.util.HashSet;
 import java.util.List;
@@ -64,18 +60,6 @@ public class UserServiceImpl implements UserService {
         return userMapper.toUserResponse(user);
     }
 
-    @Override
-    public void createPassword(PasswordCreationRequest request) {
-        var context = SecurityContextHolder.getContext();
-        String name = context.getAuthentication().getName();
-        User user = userRepository.findByUsername(name).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXITED));
-
-        if(StringUtils.hasText(request.getPassword())) {
-            throw new AppException(ErrorCode.PASSWORD_EXITED);
-        }
-        user.setPassword(passwordEncoder.encode(request.getPassword()));
-        userRepository.save(user);
-    }
 
     @Override
     @PreAuthorize("hasRole('ADMIN')")

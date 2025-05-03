@@ -1,8 +1,5 @@
 package devteria.identity_service.controller;
 
-import java.util.List;
-
-import devteria.identity_service.dto.request.PasswordCreationRequest;
 import devteria.identity_service.dto.request.UserCreationRequest;
 import devteria.identity_service.dto.request.UserUpdateRequest;
 import devteria.identity_service.dto.response.ApiResponse;
@@ -16,6 +13,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Slf4j
 @RestController
 @RequestMapping("/users")
@@ -28,14 +27,6 @@ public class UserController {
     ApiResponse<UserResponse> createUser(@RequestBody @Valid UserCreationRequest request) {
         return ApiResponse.<UserResponse>builder()
                 .result(userService.createUser(request))
-                .build();
-    }
-
-    @PostMapping("/create-password")
-    ApiResponse<Void> createPassword(@RequestBody @Valid PasswordCreationRequest request) {
-        userService.createPassword(request);
-        return ApiResponse.<Void>builder()
-                .message("Password has bean created, you  could use it to log-in")
                 .build();
     }
 
