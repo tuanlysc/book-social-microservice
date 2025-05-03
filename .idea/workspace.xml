@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="221f66e9-a142-4bc7-bb77-a7f818fd7555" name="Changes" comment="" />
+    <list default="true" id="221f66e9-a142-4bc7-bb77-a7f818fd7555" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/configuration/CustomJwtDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/configuration/JwtAuthenticationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/configuration/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/dto/response/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/exception/AppException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/exception/ErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/configuration/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/configuration/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/configuration/WebClientConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/configuration/WebClientConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/dto/request/IntrospectRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/dto/request/IntrospectRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/dto/response/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/dto/response/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/dto/response/IntrospectResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/dto/response/IntrospectResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/reposiotry/IdentityClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/reposiotry/IdentityClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/service/IdentityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/service/IdentityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/profile-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/controller/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/controller/UserProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/controller/internal/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/controller/InternalUserProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/service/impl/UserProfileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/service/impl/UserProfileServiceImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +36,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -27,12 +50,12 @@
     &quot;assignee&quot;: &quot;tuanlysc&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/tuanlysc/bookteria.git",
-    "accountId": "a814688d-0020-4fa9-8791-20c919939006"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/tuanlysc/bookteria.git&quot;,
+    &quot;accountId&quot;: &quot;a814688d-0020-4fa9-8791-20c919939006&quot;
   }
-}]]></component>
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -56,32 +79,73 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.ApiGatewayApplication.executor": "Run",
     "Spring Boot.IdentityServiceApplication.executor": "Run",
     "Spring Boot.ProfileServiceApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/ecommerce_ai/bookteria",
+    "last_opened_file_path": "D:/ecommerce_ai/bookteria/profile-service/src/main/java/devtertia/profileservice",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "settings.editor.selected.configurable": "advanced.settings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ecommerce_ai\bookteria\profile-service\src\main\java\devtertia\profileservice" />
+      <recent name="D:\ecommerce_ai\bookteria\profile-service\src\main\java\devtertia\profileservice\configuration" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\ecommerce_ai\bookteria" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="devtertia.profileservice.dto.response" />
+      <recent name="devteria.apigateway.dto.response" />
+      <recent name="devteria.apigateway.dto.request" />
       <recent name="devteria.identity_service.dto.response" />
       <recent name="devteria.identity_service.dto.request" />
-      <recent name="devtertia.profileservice.dto.response" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="CompoundRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="hiddenConfigurations">
+      <map>
+        <entry key="CompoundRunConfigurationType">
+          <value>
+            <set>
+              <option value="project" />
+            </set>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="RunManager" selected="Spring Boot.IdentityServiceApplication">
+    <configuration name="api-gateway" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="devteria.apigateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="project" type="CompoundRunConfigurationType">
+      <toRun name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="IdentityServiceApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="ProfileServiceApplication" type="SpringBootApplicationConfigurationType" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="api-getway" />
       <method v="2">
@@ -96,13 +160,6 @@
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="devteria.apigateway.ApiGatewayApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ApiGetwayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="api-getway" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="devteria.apigetway.ApiGetwayApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -150,11 +207,45 @@
       <workItem from="1745677840446" duration="19000" />
       <workItem from="1745677914450" duration="365000" />
       <workItem from="1745759024583" duration="6397000" />
-      <workItem from="1745765529727" duration="2407000" />
+      <workItem from="1745765529727" duration="5051000" />
+      <workItem from="1745822087768" duration="860000" />
+      <workItem from="1745850434204" duration="1473000" />
+      <workItem from="1745914202660" duration="1631000" />
+      <workItem from="1745936842824" duration="1806000" />
+      <workItem from="1745993781043" duration="6901000" />
+      <workItem from="1746026121039" duration="524000" />
+      <workItem from="1746026679930" duration="1695000" />
+      <workItem from="1746105756894" duration="2813000" />
+      <workItem from="1746169162098" duration="7215000" />
+      <workItem from="1746251189796" duration="2519000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/identity-service/src/main/java/devteria/identity_service/configuration/JwtAuthenticationEntryPoint.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/identity-service/src/main/java/devteria/identity_service/configuration/SecurityConfig.java</url>
+          <line>39</line>
+          <properties class="devteria.identity_service.configuration.SecurityConfig" method="filterChain">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

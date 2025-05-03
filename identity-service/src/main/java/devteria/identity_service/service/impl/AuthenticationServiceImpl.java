@@ -5,20 +5,15 @@ import com.nimbusds.jose.crypto.MACSigner;
 import com.nimbusds.jose.crypto.MACVerifier;
 import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.SignedJWT;
-import devteria.identity_service.configuration.TokenValidator;
-import devteria.identity_service.constant.PredefinedRole;
 import devteria.identity_service.dto.request.*;
 import devteria.identity_service.dto.response.AuthenticationResponse;
 import devteria.identity_service.dto.response.IntrospectResponse;
 import devteria.identity_service.entity.InvalidatedToken;
-import devteria.identity_service.entity.Role;
 import devteria.identity_service.entity.User;
 import devteria.identity_service.exception.AppException;
 import devteria.identity_service.exception.ErrorCode;
 import devteria.identity_service.repository.InvalidatedTokenRepository;
-import devteria.identity_service.repository.http.client.OutboundIdentityClient;
 import devteria.identity_service.repository.UserRepository;
-import devteria.identity_service.repository.http.client.OutboundUserClient;
 import devteria.identity_service.service.AuthenticationService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -42,9 +37,6 @@ import java.util.*;
 public class AuthenticationServiceImpl implements AuthenticationService {
     UserRepository userRepository;
     InvalidatedTokenRepository invalidateTokenRepository;
-    TokenValidator tokenValidator;
-    OutboundIdentityClient outboundIdentityClient;
-    OutboundUserClient outboundUserClient;
 
     @NonFinal
     @Value("${jwt.signerKey}")
@@ -89,45 +81,6 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
         return IntrospectResponse.builder().valid(isValid).build();
     }
-
-//    @Override
-//    public AuthenticationResponse outboundAuthenticate(String code) {
-//        var response = outboundIdentityClient.exchangeCode(ExchangeTokenRequest.builder()
-//                        .code(code)
-//                        .clientId(CLIENT_ID)
-//                        .clientSecret(CLIENT_SECRET)
-//                        .redirectUri(REDIRECT_URI)
-//                        .grantType(GRANT_TYPE)
-//                .build());
-//
-//        log.info("Outbound authenticate response: {}", response);
-//
-//        var userInfo = outboundUserClient.getUserInfo("json", response.getAccessToken());
-//
-//        log.info("Outbound user info: {}", userInfo);
-//
-//        Set<Role> roles = new HashSet<>();
-//        roles.add(Role.builder().name(PredefinedRole.USER_ROLE).build());
-//
-//        // Onboard user
-//
-//        var user = userRepository.findByUsername(userInfo.getEmail()).orElseGet(
-//                () -> userRepository.save(User.builder()
-//                                .username(userInfo.getEmail())
-//                                .firstName(userInfo.getGivenName())
-//                                .lastName(userInfo.getFamilyName())
-//                                .roles(roles)
-//                        .build())
-//        );
-//
-//        //Exchange token
-//
-//        var token = generateToken(user);
-//
-//        return AuthenticationResponse.builder()
-//                .token(token)
-//                .build();
-//    }
 
     @Override
     public AuthenticationResponse authenticate(AuthenticationRequest request) {
@@ -181,9 +134,6 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     }
 
     private SignedJWT verifyToken(String token, boolean isRefresh) throws ParseException, JOSEException {
-        if(tokenValidator.isValid(token)) {
-            throw new AppException(ErrorCode.UNAUTHENTICATED);
-        }
 
         JWSVerifier verifier = new MACVerifier(SIGNER_KEY.getBytes());
 

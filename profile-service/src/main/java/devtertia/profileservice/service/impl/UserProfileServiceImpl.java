@@ -9,6 +9,7 @@ import devtertia.profileservice.service.UserProfileService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -27,6 +28,7 @@ public class UserProfileServiceImpl implements UserProfileService {
     }
 
     @Override
+    @PreAuthorize("hasRole('ADMIN')")
     public UserProfileResponse getProfile(String id) {
         UserProfile userProfile = userProfileRepository.findById(id).orElseThrow(()->new RuntimeException("User profile not found"));
         return userProfileMapper.toUserProfileResponse(userProfile);

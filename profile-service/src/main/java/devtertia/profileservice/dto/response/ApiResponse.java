@@ -1,4 +1,4 @@
-package devteria.apigateway.dto.response;
+package devtertia.profileservice.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
