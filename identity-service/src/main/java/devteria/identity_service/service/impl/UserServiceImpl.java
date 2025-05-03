@@ -59,13 +59,7 @@ public class UserServiceImpl implements UserService {
 
         profileRequest.setUserId(user.getId());
 
-        ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-
-        var authHeader = requestAttributes.getRequest().getHeader("Authorization");
-
-        log.info("authHeader: {}", authHeader);
-
-        profileClient.createProfile(authHeader, profileRequest);
+        profileClient.createProfile(profileRequest);
 
         return userMapper.toUserResponse(user);
     }
