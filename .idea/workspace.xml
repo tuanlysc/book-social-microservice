@@ -5,28 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="221f66e9-a142-4bc7-bb77-a7f818fd7555" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/configuration/CustomJwtDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/configuration/JwtAuthenticationEntryPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/configuration/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/dto/response/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/exception/AppException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/exception/ErrorCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/configuration/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/configuration/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/configuration/WebClientConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/configuration/WebClientConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/dto/request/IntrospectRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/dto/request/IntrospectRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/dto/response/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/dto/response/ApiResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/dto/response/IntrospectResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/dto/response/IntrospectResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/reposiotry/IdentityClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/reposiotry/IdentityClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/service/IdentityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/devteria/apigateway/service/IdentityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/profile-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/controller/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/controller/UserProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/controller/internal/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/controller/InternalUserProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/service/impl/UserProfileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/profile-service/src/main/java/devtertia/profileservice/service/impl/UserProfileServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +196,7 @@
       <workItem from="1746026679930" duration="1695000" />
       <workItem from="1746105756894" duration="2813000" />
       <workItem from="1746169162098" duration="7215000" />
-      <workItem from="1746251189796" duration="2519000" />
+      <workItem from="1746251189796" duration="3676000" />
     </task>
     <servers />
   </component>

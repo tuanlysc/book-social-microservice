@@ -25,6 +25,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.util.HashSet;
 import java.util.List;
@@ -57,7 +59,13 @@ public class UserServiceImpl implements UserService {
 
         profileRequest.setUserId(user.getId());
 
-        profileClient.createProfile(profileRequest);
+        ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+
+        var authHeader = requestAttributes.getRequest().getHeader("Authorization");
+
+        log.info("authHeader: {}", authHeader);
+
+        profileClient.createProfile(authHeader, profileRequest);
 
         return userMapper.toUserResponse(user);
     }
